@@ -7,3 +7,9 @@
     @apply bg-black;
   }
 }
+
+@layer components {
+  .navigation-links {
+    @apply flex gap-10 uppercase tracking-wider;
+  }
+}
