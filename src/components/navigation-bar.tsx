@@ -1,4 +1,5 @@
 import { configNavigationBarLinks } from "../configs";
+import { LinkButton } from "../components";
 
 export function NavigationBar() {
   return (
@@ -19,6 +20,7 @@ export function NavigationBar() {
       </div>
 
       <div className="navigation-item-second flex gap-10 items-center">
+        <LinkButton to="/about">Download</LinkButton>
         <ul className="navigation-links">
           <li>Login</li>
           <li>Join</li>
