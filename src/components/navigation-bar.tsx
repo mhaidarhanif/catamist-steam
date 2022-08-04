@@ -1,10 +1,10 @@
-import { configNavigationBarLinks } from "../configs";
 import { LinkButton } from "../components";
+import { configNavigationBarLinks } from "../configs";
 
 export function NavigationBar() {
   return (
-    <nav className="px-10 py-5 text-xl flex flex-wrap justify-between">
-      <div className="navigation-item-first flex gap-10 items-center">
+    <nav className="flex flex-wrap justify-between px-10 py-5 text-xl">
+      <div className="navigation-item-first flex items-center gap-10">
         <img
           className="h-[50px]"
           src="/logo/catamist-logo.svg"
@@ -19,7 +19,7 @@ export function NavigationBar() {
         </ul>
       </div>
 
-      <div className="navigation-item-second flex gap-10 items-center">
+      <div className="navigation-item-second flex items-center gap-10">
         <LinkButton to="/about">Download</LinkButton>
         <ul className="navigation-links">
           <li>Login</li>
