@@ -14,6 +14,13 @@
   }
 
   .button {
-    @apply bg-teal-500 text-white px-3 py-1 rounded-md;
+    @apply rounded-md bg-teal-500 px-3 py-1 text-white;
+  }
+}
+
+@layer utilities {
+  .bg-home-hero {
+    @apply bg-center;
+    background-image: url("https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1442&q=80");
   }
 }
