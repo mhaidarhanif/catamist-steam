@@ -44,7 +44,7 @@ export const dataCategories: Category[] = [
     games: [
       {
         name: "Stray",
-        price: 150000,
+        price: 123000,
         currency: "IDR",
         tags: ["Adventure", "Cyberpunk"],
         platforms: ["windows"],

@@ -3,7 +3,7 @@ export function Footer() {
   const year = date.getFullYear();
 
   return (
-    <footer className="flex flex-wrap justify-between px-10 py-5">
+    <footer className="flex flex-wrap justify-center px-10 py-5">
       <p>&copy; {year} Catamist</p>
     </footer>
   );

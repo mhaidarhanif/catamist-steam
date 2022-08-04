@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 
 import { dataCategories } from "../data";
 import { formatGamePrice } from "../utils";
+import { Icon } from "./icon";
 
 export function CategoryTabs() {
   return (
@@ -51,11 +52,11 @@ export function CategoryTabs() {
                   <img src={game.thumbnailImageUrl} alt={game.name} />
 
                   <div className="game-details flex w-full items-center justify-between py-2 px-4">
-                    <div>
+                    <div className="space-y-1">
                       <h4 className="font-bold">{game.name}</h4>
-                      <div>
+                      <div className="flex gap-1">
                         {game.platforms.map((platform) => (
-                          <span>{platform}</span>
+                          <Icon key={platform} name={platform} />
                         ))}
                       </div>
                       <p>{game.tags.join(", ")}</p>
