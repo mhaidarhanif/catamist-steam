@@ -3,7 +3,7 @@ import { RouteHome } from "./routes";
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col dark:text-white">
+    <div className="font-body flex min-h-screen flex-col dark:text-white">
       <NavigationBar />
 
       <RouteHome />

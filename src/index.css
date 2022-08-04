@@ -15,6 +15,7 @@
 
   .button {
     @apply rounded-md bg-teal-500 px-3 py-1 text-white;
+    @apply font-body-bold;
   }
 }
 

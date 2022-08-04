@@ -9,7 +9,7 @@ export function HomeHero() {
       )}
     >
       <div className="text-center">
-        <h1 className="text-8xl leading-tight">
+        <h1 className="font-brand-bold text-8xl leading-tight">
           Catamyst
           <br />
           Festival
