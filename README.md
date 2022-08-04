@@ -11,10 +11,12 @@ A demo and discussion for implementing UI and UX design from Figma into React co
 - Repo:
   - https://github.com/catamyst-community/catamist
 
-## Design
+## Designs
 
 - Figma file: https://figma.com/file/71uxghlV39Z7t3zZ40h62w/Catamist
 
-## Video
+## Videos
 
-- YouTube video: https://youtube.com/watch?v=mdebhZ76Iic
+1. Figma to React https://youtu.be/mdebhZ76Iic
+2. Form Data https://youtu.be/kYh_SSRygmE
+3. Backend API https://youtube.com/channel/UCmOBswBENyNAP10eZ_xCHSQ
