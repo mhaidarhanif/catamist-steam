@@ -1,3 +1,5 @@
+import { Download } from "phosphor-react";
+
 import { LinkButton } from "../components";
 import { configNavigationBarLinks } from "../configs";
 
@@ -20,7 +22,11 @@ export function NavigationBar() {
       </div>
 
       <div className="navigation-item-second flex items-center gap-10">
-        <LinkButton to="/about">Download</LinkButton>
+        <LinkButton to="/about" className="flex items-center gap-2">
+          <Download weight="bold" />
+          <span>Download</span>
+        </LinkButton>
+
         <ul className="navigation-links">
           <li>Login</li>
           <li>Join</li>
