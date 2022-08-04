@@ -1,34 +1,8 @@
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import { clsx } from "clsx";
 
-interface Tab {
-  value: string;
-  name: string;
-  content: any;
-}
-
-const tabs: Tab[] = [
-  {
-    value: "tab1",
-    name: "New & Trending",
-    content: "Tab one content",
-  },
-  {
-    value: "tab2",
-    name: "Top Sellers",
-    content: "Tab second content",
-  },
-  {
-    value: "tab3",
-    name: "Popular Upcoming",
-    content: "Tab third content",
-  },
-  {
-    value: "tab4",
-    name: "Specials",
-    content: "Tab fourth content",
-  },
-];
+import { dataCategories } from "../data";
+import { formatGamePrice } from "../utils";
 
 export function CategoryTabs() {
   return (
@@ -36,9 +10,9 @@ export function CategoryTabs() {
       <TabsPrimitive.List
         className={clsx("flex w-full bg-white dark:bg-gray-800")}
       >
-        {tabs.map(({ name, value }) => (
+        {dataCategories.map(({ name, value }) => (
           <TabsPrimitive.Trigger
-            key={`tab-trigger-${value}`}
+            key={`category-trigger-${value}`}
             value={value}
             className={clsx(
               "group",
@@ -61,14 +35,40 @@ export function CategoryTabs() {
         ))}
       </TabsPrimitive.List>
 
-      {tabs.map((tab) => (
+      {dataCategories.map((category) => (
         <TabsPrimitive.Content
-          key={`tab-content-${tab.value}`}
-          value={tab.value}
+          className="py-5"
+          key={`category-content-${category.value}`}
+          value={category.value}
         >
-          <span className="text-sm text-gray-700 dark:text-gray-100">
-            {tab.content}
-          </span>
+          <div className="flex flex-col gap-5">
+            {category.games.map((game) => {
+              return (
+                <div
+                  key={game.name}
+                  className="game hover: flex w-full bg-slate-900 hover:bg-slate-700"
+                >
+                  <img src={game.thumbnailImageUrl} alt={game.name} />
+
+                  <div className="game-details flex w-full items-center justify-between py-2 px-4">
+                    <div>
+                      <h4 className="font-bold">{game.name}</h4>
+                      <div>
+                        {game.platforms.map((platform) => (
+                          <span>{platform}</span>
+                        ))}
+                      </div>
+                      <p>{game.tags.join(", ")}</p>
+                    </div>
+
+                    <div className="game-price">
+                      <p>{formatGamePrice(game)}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </TabsPrimitive.Content>
       ))}
     </TabsPrimitive.Root>

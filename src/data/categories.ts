@@ -1,11 +1,10 @@
-type Category = {
+export type Category = {
   value: string;
   name: string;
-  content: any;
   games: Game[];
 };
 
-type Game = {
+export type Game = {
   name: string;
   price: number;
   currency: string;
@@ -18,7 +17,6 @@ export const dataCategories: Category[] = [
   {
     value: "tab1",
     name: "New & Trending",
-    content: "Tab one content",
     games: [
       {
         name: "GigaBash",
@@ -43,7 +41,6 @@ export const dataCategories: Category[] = [
   {
     value: "tab2",
     name: "Top Sellers",
-    content: "Tab second content",
     games: [
       {
         name: "Stray",
@@ -68,7 +65,6 @@ export const dataCategories: Category[] = [
   {
     value: "tab4",
     name: "Specials",
-    content: "Tab fourth content",
     games: [
       {
         name: "Rust",
